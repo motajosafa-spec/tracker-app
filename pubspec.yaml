@@ -1,0 +1,19 @@
+
+name: systema
+description: Sistema de rastreamento
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_maps_flutter: ^2.5.0
+  geolocator: ^10.0.0
+  cloud_firestore: ^4.0.0
+  firebase_core: ^2.0.0
+
+flutter:
+  uses-material-design: true
