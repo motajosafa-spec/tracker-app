@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- ══════════════════════════════════════════════════
+	     CONFIGURAÇÕES GERAIS DO APP
+	     ══════════════════════════════════════════════════ -->
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Rastreador</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>tracker_app</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+
+	<!-- ══════════════════════════════════════════════════
+	     PERMISSÕES DE LOCALIZAÇÃO
+	     O iOS EXIGE descrições em texto — sem elas, a App Store rejeita
+	     ══════════════════════════════════════════════════ -->
+
+	<!-- Exibida quando o app solicita localização em uso -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>O Rastreador precisa da sua localização para registrar e exibir sua posição no mapa em tempo real.</string>
+
+	<!-- Exibida quando o app solicita localização em segundo plano -->
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>O Rastreador precisa rastrear sua localização mesmo quando o app está em segundo plano para garantir o monitoramento contínuo.</string>
+
+	<!-- Legado — mantido por compatibilidade com iOS mais antigos -->
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>O Rastreador precisa acessar sua localização sempre para o monitoramento contínuo.</string>
+
+	<!-- ══════════════════════════════════════════════════
+	     MODOS DE SEGUNDO PLANO
+	     Sem "location", o iOS suspende o app e para o rastreamento
+	     ══════════════════════════════════════════════════ -->
+	<key>UIBackgroundModes</key>
+	<array>
+		<!-- Permite continuar recebendo atualizações de localização em segundo plano -->
+		<string>location</string>
+		<!-- Necessário pelo flutter_foreground_task para manter a tarefa ativa -->
+		<string>fetch</string>
+		<string>processing</string>
+	</array>
+
+	<!-- ══════════════════════════════════════════════════
+	     CONFIGURAÇÕES DE INTERFACE
+	     ══════════════════════════════════════════════════ -->
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+</dict>
+</plist>
